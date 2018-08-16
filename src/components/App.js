@@ -1,6 +1,9 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
+import logo from '../logo.svg';
 import './App.css';
+import { Link, Route, Switch } from 'react-router-dom';
+
+import About from './about/about';
 
 class App extends Component {
   render() {
@@ -12,6 +15,16 @@ class App extends Component {
         </header>
         <p className="App-intro">
           To get started, edit <code>src/App.js</code> and save to reload.
+
+          <ul>
+            <li><Link to="/about">About</Link></li>
+          </ul>
+
+          <Switch>
+            <Route path="/about" component={About}/>
+          </Switch>
+
+
         </p>
       </div>
     );
