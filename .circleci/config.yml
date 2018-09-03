@@ -9,5 +9,8 @@ jobs:
           name: Greeting
           command: echo Hello, world.
       - run:
-          name: Print the Current Time
-          command: date
+          name: yarn
+          command: yarn
+      - run:
+          name: tests
+          command: npm test
